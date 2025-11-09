@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliveira Travel — Viagens com sentido</title>
+  <meta name="description" content="Consultoria de viagens boutique com raiz mediterrânica e olhar global. Criamos experiências com sentido, feitas à medida.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E5456',
+            secondary: '#D8C7A1',
+            light: '#F7F6F4',
+            dark: '#4E5A5A'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['DM Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS opcional -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-primary bg-light">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white shadow-sm z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logótipo (substituir pelos caminhos corretos) -->
+      <a href="#" class="flex items-center space-x-3">
+        <img src="header.png" alt="Oliveira Travel" class="h-8 md:h-10 object-contain">
+      </a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#about" class="hover:text-secondary transition">Sobre</a>
+        <a href="#experiences" class="hover:text-secondary transition">Experiências</a>
+        <a href="#process" class="hover:text-secondary transition">Processo</a>
+        <a href="#contact" class="hover:text-secondary transition">Contacto</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-6 py-4 flex flex-col space-y-3 text-sm font-medium">
+        <a href="#about" class="hover:text-secondary transition">Sobre</a>
+        <a href="#experiences" class="hover:text-secondary transition">Experiências</a>
+        <a href="#process" class="hover:text-secondary transition">Processo</a>
+        <a href="#contact" class="hover:text-secondary transition">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center bg-cover bg-center"
+    style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=1920&q=80')">
+    <div class="container mx-auto px-6 text-center text-white">
+      <!-- Logótipo versão clara (sobre o hero) -->
+      <img src="hero.png" alt="Oliveira Travel" class="mx-auto mb-8 h-28 md:h-36 object-contain opacity-95 drop-shadow-md">
+      <h1 class="text-5xl md:text-6xl font-heading font-semibold tracking-[0.18em] uppercase mb-6">
+        Viagens com sentido
+      </h1>
+      <p class="text-lg md:text-2xl mb-8 max-w-2xl mx-auto">
+        Não vendemos pacotes. Criamos capítulos da tua história.
+      </p>
+      <a href="#contact" class="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-medium tracking-wide transition">
+        Agendar conversa
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-heading font-semibold text-center mb-16 tracking-[0.14em] uppercase">
+        Porquê a Oliveira Travel?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="text-center p-8 rounded-lg shadow-md hover:shadow-lg transition bg-light">
+          <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="headphones" class="text-primary w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-heading font-semibold mb-4">Ouvimos, não adivinhamos</h3>
+          <p class="text-dark text-sm leading-relaxed">
+            Contas-nos o que sonhas — nós desenhamos a rota. Sem formulários intermináveis. Só conversa real.
+          </p>
+        </div>
+        <div class="text-center p-8 rounded-lg shadow-md hover:shadow-lg transition bg-light">
+          <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="check-circle" class="text-primary w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-heading font-semibold mb-4">Cuidamos de tudo</h3>
+          <p class="text-dark text-sm leading-relaxed">
+            Do visto à última reserva, até ao sítio certo para o teu café ao fim do dia — fica tudo tratado.
+          </p>
+        </div>
+        <div class="text-center p-8 rounded-lg shadow-md hover:shadow-lg transition bg-light">
+          <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="compass" class="text-primary w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-heading font-semibold mb-4">Viajamos contigo</h3>
+          <p class="text-dark text-sm leading-relaxed">
+            Não desaparecemos depois do pagamento. Estamos presentes antes, durante e depois da viagem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiences Section -->
+  <section id="experiences" class="py-20 bg-light">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-heading font-semibold text-center mb-16 tracking-[0.14em] uppercase">
+        Experiências Reais
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Família num resort em Tulum ao pôr do sol" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold mb-3">Família em Tulum</h3>
+            <p class="text-dark text-sm leading-relaxed mb-4">
+              4 dias de descanso consciente: eco-resort com aulas de yoga ao amanhecer e jantar sob as estrelas num cenote privado.
+            </p>
+            <p class="italic text-xs text-dark">
+              “Finalmente uma viagem em que não tivemos de pensar em nada — só em estar juntos.”
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+          <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=800&q=80" alt="Casal numa rua típica de Marraquexe" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold mb-3">Escapadinha em Marraquexe</h3>
+            <p class="text-dark text-sm leading-relaxed mb-4">
+              3 noites num riad histórico, workshop de cerâmica com artesão local e passeio pelo Atlas ao pôr do sol.
+            </p>
+            <p class="italic text-xs text-dark">
+              “Sentimo-nos mais convidados do que turistas.”
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Paisagem rural no Alentejo ao nascer do sol" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold mb-3">Retiro no Alentejo</h3>
+            <p class="text-dark text-sm leading-relaxed mb-4">
+              7 dias de silêncio, caminhadas entre olivais e sessões de escrita para pôr a vida em perspetiva.
+            </p>
+            <p class="italic text-xs text-dark">
+              “Voltei diferente. Trouxe para casa a mesma calma que encontrei lá.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-heading font-semibold text-center mb-16 tracking-[0.14em] uppercase">
+        Como funciona?
+      </h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+          <h3 class="text-xl font-heading font-semibold mb-3">Conversamos</h3>
+          <p class="text-dark text-sm">
+            15 minutos em português, inglês ou alemão. Sem compromisso.
+          </p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
+          <h3 class="text-xl font-heading font-semibold mb-3">Planeamos em conjunto</h3>
+          <p class="text-dark text-sm">
+            Recebes uma proposta clara, com opções, preços transparentes e o porquê de cada escolha.
+          </p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+          <h3 class="text-xl font-heading font-semibold mb-3">Vives a viagem</h3>
+          <p class="text-dark text-sm">
+            Tu viajas. Nós zelamos por tudo nos bastidores.
+          </p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">4</div>
+          <h3 class="text-xl font-heading font-semibold mb-3">Contamos histórias</h3>
+          <p class="text-dark text-sm">
+            Depois partilhas connosco — e começamos a desenhar a próxima.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="py-20 bg-secondary text-primary">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-semibold mb-8 tracking-[0.14em] uppercase">Raiz e asa</h2>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-6">
+        A Oliveira Travel nasce em <span class="font-semibold">Portugal</span>, mas pertence ao <span class="font-semibold">mundo</span>.
+      </p>
+      <p class="max-w-3xl mx-auto mb-8 text-sm md:text-base leading-relaxed">
+        O nome é uma homenagem à oliveira — símbolo de <span class="font-semibold">paz, resistência e hospitalidade</span> — 
+        mas a alma viaja do Japão ao Chile, do Saara ao Algarve.
+      </p>
+      <p class="text-lg md:text-xl font-heading italic">
+        Não somos uma agência.<br>
+        Somos <span class="font-semibold">consultores de experiências com passaporte</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-light">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <div class="bg-white p-8 md:p-12 rounded-lg shadow-md">
+        <h2 class="text-3xl font-heading font-semibold text-center mb-6 tracking-[0.12em] uppercase">
+          Recebe o nosso guia gratuito
+        </h2>
+        <p class="text-center mb-8 text-sm md:text-base">
+          📥 <span class="font-semibold">“5 perguntas que todo viajante deve fazer antes de reservar”</span><br>
+          Um e-book prático, sem jargões, com espaço para as tuas respostas.
+        </p>
+        <form class="space-y-4">
+          <div>
+            <input type="text" placeholder="O teu nome" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+          </div>
+          <div>
+            <input type="email" placeholder="O teu e-mail" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+          </div>
+          <div>
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+              <option value="pt">Receber em português</option>
+              <option value="en">Receber em inglês</option>
+              <option value="en">Receber em alemão</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-md font-medium transition">
+            Enviar guia
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <h3 class="text-2xl font-heading font-semibold mb-1">Oliveira Travel</h3>
+          <p class="text-sm">© 2025 — Viagens com sentido.</p>
+        </div>
+        <div class="flex flex-col md:flex-row md:space-x-6 text-sm text-light">
+          <a href="mailto:ola@oliveiratravel.com" class="hover:text-secondary transition mb-2 md:mb-0">ola@oliveiratravel.com</a>
+          <a href="https://instagram.com/travelwitholiveira" class="hover:text-secondary transition">@oliveiratravel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    feather.replace();
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (toggle && mobileMenu) {
+      toggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
